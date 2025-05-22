@@ -16,5 +16,14 @@
     <div class="result" *ngIf="result !== null">
       <p>Result: {{ result }}</p>
     </div>
+    <div class="history" *ngIf="history.length > 0">
+        <h3>History</h3>
+        <ul>
+          <li *ngFor="let entry of history">{{ entry }}</li>
+        </ul>
+    </div>
+    <div class="clear-history">
+        <button (click)="clearHistory()">Clear History</button>
+      
   </div>
   
